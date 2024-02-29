@@ -18,12 +18,12 @@ app.use(express.static('public'));
 
 // Serve 'notes.html' for requests to '/notes'
 app.get('/notes', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'notes.html'));
+  res.sendFile(path.join(__dirname, 'note-taker', 'public', 'notes.html'));
 });
 
 // Serve 'index.html' for all other routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'note-taker', 'public', 'index.html'));
 });
 
 // API Route to get all notes
